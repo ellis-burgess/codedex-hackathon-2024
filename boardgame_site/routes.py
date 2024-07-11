@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
 from boardgame_site import app
+from boardgame_site.models import Event
 
 @app.route('/')
 def index():
@@ -15,7 +16,8 @@ def reservations():
 
 @app.route('/events')
 def events():
-  return render_template('events_calendar.html', title='Events Calendar')
+  events = Event.query.all()
+  return render_template('events_calendar.html', title='Events Calendar', events=events)
 
 @app.route('/menu')
 def menu():
