@@ -9,6 +9,9 @@ def get_navaddresses():
     return [
       {'name': 'Home', 'url': url_for('index')},
       {'name': 'About', 'url': url_for('about')},
+      {'name': 'Reservations', 'url': url_for('reservations')},
+      {'name': 'Events', 'url': url_for('events')},
+      {'name': 'Menu', 'url': url_for('menu')}
     ]
     
 # Context processor to make navaddresses available globally
