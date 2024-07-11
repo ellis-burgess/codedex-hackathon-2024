@@ -10,7 +10,7 @@ class Event(db.Model):
   end_recurrence = db.Column(db.DateTime)
   title = db.Column(db.Text, nullable=False)
   description = db.Column(db.Text, nullable=False)
-  event_banner = db.Column(db.String(40), nullable=False, default='default.jpg', server_default='default.jpg')
+  event_banner = db.Column(db.String(40), nullable=False, default='sipnplay.png', server_default='sipnplay.png')
 
   def __repr__(self):
     return_str = [f"Event: "]

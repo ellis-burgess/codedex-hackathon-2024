@@ -7,6 +7,7 @@
 {% for event in events %}
   <h2>{{ event.title }}</h2>
   <p>{{ event.start_time }}</p>
+  <img src="{{ url_for('static', filename='img/' + event.event_banner) }}" alt="">
   {% if event.recurring %}
     <p>This event repeats!</p>
     {% if event.end_recurrence %}
