@@ -11,3 +11,14 @@ class Event(db.Model):
   title = db.Column(db.Text, nullable=False)
   description = db.Column(db.Text, nullable=False)
   event_banner = db.Column(db.String(40), nullable=False, default='default.jpg')
+
+  def __repr__(self):
+    return_str = [f"Event: "]
+    return_str.append(f"'{self.date}'")
+    if self.recurring == True:
+      return_str.append("(recurring event)")
+      return_str.append(f"'{self.frequency}'")
+      return_str.append(f"Ends: '{self.end_recurrence}'")
+    return_str.append(f"'{self.title}'")
+    return_str.append(f"'{self.description}'")
+    return ' '.join(return_str)

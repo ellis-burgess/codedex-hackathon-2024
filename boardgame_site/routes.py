@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
 from boardgame_site import app
+from boardgame_site.models import Event
 
 @app.route('/')
 def index():
