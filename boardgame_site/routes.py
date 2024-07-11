@@ -16,7 +16,8 @@ def reservations():
 
 @app.route('/events')
 def events():
-  return render_template('events_calendar.html', title='Events Calendar')
+  events = Event.query.all()
+  return render_template('events_calendar.html', title='Events Calendar', events=events)
 
 @app.route('/menu')
 def menu():

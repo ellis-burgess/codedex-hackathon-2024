@@ -3,4 +3,16 @@
 {% block main %}
 <h1>Events Calendar</h1>
 <p>Check out our upcoming events!</p>
+
+{% for event in events %}
+  <h2>{{ event.title }}</h2>
+  <p>{{ event.start_time }}</p>
+  {% if event.recurring %}
+    <p>This event repeats!</p>
+    {% if event.end_recurrence %}
+      <p>This event will finish on {{ event.end_recurrence }}</p>
+    {% endif %}
+  {% endif %}
+  <p>{{ event.description }}</p>
+{% endfor %}
 {% endblock main %}
