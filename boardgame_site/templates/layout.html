@@ -10,8 +10,9 @@
   <header>
     <nav>
       <ul>
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
+        {% for navaddress in navaddresses %}
+          <li><a href="{{ navaddress.url }}">{{ navaddress.name }}</a></li>
+        {% endfor %}      
       </ul>
     </nav>
   </header>
