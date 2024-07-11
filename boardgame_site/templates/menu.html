@@ -1,6 +1,115 @@
 {% extends "layout.html" %}
 
 {% block main %}
-<h1>Our Menu</h1>
-<p>Check out our tasty offerings!</p>
+<h1>Menu</h1>
+<nav class="menu-nav">
+  <ul>
+    <li><a href="#coffee">coffee</a></li>
+    <li><a href="#specialty-drinks">Specialty Drinks</a></li>
+    <li><a href="#boba">Boba</a></li>
+    <li><a href="#hot-bites">Hot Bites</a></li>
+    <li><a href="#seasonal-menu">Seasonal Menu</a></li>
+    <li><a href="#sandwiches-and-salads">Sandwiches and Salads</a></li>
+    <li><a href="#beer-wine">Beer and Wine</a></li>
+  </ul>
+</nav>
+
+<section id="coffee">
+  <ul class="coffee">
+    <li><span class="item">Latte</span><span class="cost">$4.75</span></li>
+    <li><span class="item">Cortado</span><span class="cost">$4.25</span></li>
+    <li><span class="item">Drip coffee</span><span class="cost">$3</span></li>
+    <li><span class="item">Cafe au Lait</span><span class="cost">$3.25</span></li>
+    <li><span class="item">Cappucino</span><span class="cost">$4.50</span></li>
+    <li><span class="item">Mocha</span><span class="cost">$5.75</span></li>
+    <li><span class="item">Red Eye</span><span class="cost">$4.50</span></li>
+    <li><span class="item">Americano</span><span class="cost">$3.75</span></li>
+  </ul>
+</section>
+
+<section id="specialty-drinks">
+  <ul class="specialty-drinks">
+    <li><span class="item">Matcha Latte</span><span class="cost">$5.25</span></li>
+    <li><span class="item">Lavendar Latte</span><span class="cost">$5.75</span></li>
+    <li><span class="item">Hot Chocolate</span><span class="cost">$4.50</span></li>
+    <li><span class="item">Rose Latte</span><span class="cost">$5.75</span></li>
+    <li><span class="item">Nutella Latte</span><span class="cost">$5.75</span></li>
+    <li><span class="item">Brown Sugar Latte</span><span class="cost">$5.75</span></li>
+    <li><span class="item">Chai</span><span class="cost">$5.00</span></li>
+    <li><span class="item">Bumblebee Latte</span><span class="cost">$6.75</span></li>
+    <li><span class="item">Dirty Chai</span><span class="cost">$6.75</span></li>
+  </ul>
+</section>
+
+<section id="boba">
+  <ul class="boba">
+    <li>
+      <span class="item">The OG</span><span class="description">Classic milk tea</span>
+      <ul>
+        <li class="cost">Medium: $4.25</li>
+        <li class="cost">Large: $5.25</li>
+        <li class="cost">Hot: 5.25</li>
+      </ul>
+    </li>
+    <li>
+      <span class="item">Brown Sugar Boba</span><span class="description">Caffeine free</span>
+      <ul>
+        <li class="cost">Medium: $4.75</li>
+        <li class="cost">Large: $5.75</li>
+        <li class="cost">Hot: $5.75</li>
+      </ul>
+    </li>
+    <li>
+      <span class="item">Taro Boba Coconut Boba</span><span class="description">Caffeine free, dairy free</span>
+      <ul>
+        <li class="cost">Medium: $4.25</li>
+        <li class="cost">Large: $5.25</li>
+        <li class="cost">Hot: $5.25</li>
+      </ul>
+    </li>
+    <li>
+      <span class="item">Fruit Green/Black Tea</span><span class="description">Comes in a variety of flavors: mango/strawberry/passionfruit/peach/green apple/lychee/kiwi. Feel free to mix and match!</span>
+      <ul>
+        <li class="cost">Medium: $4.25</li>
+        <li class="cost">Large: $5.25</li>
+      </ul>
+    </li>
+    <li>
+      <span class="item">Fruit Black Tea</span><span class="description">Peach or strawberry flavor available. Feel free to mix and match!</span>
+      <ul>
+        <li class="cost">Medium: $4.75</li>
+        <li class="cost">Large:$5.25</li>
+      </ul>
+    </li>
+    <li>
+      <span class="item">Flavored Milk Tea</span><span class="description">Dairy free. Jasmine and watermelon flavors available.</span>
+      <ul>
+        <li class="cost">Medium: $4.25</li>
+        <li class="cost">Large: $5.25</li>
+        <li class="cost">Hot: $5.25</li>
+      </ul>
+    </li>
+    <li><span class="item">Toppings</span><span class="cost">+$0.50</span><span class="description">Tapioca pearls, lychee jelly, mixed jelly, grass jelly, pop strawberry, pop passionfruit, mango stars</span></li>
+  </ul>
+</section>
+
+<section id="hot-bites">
+  <ul class="hot-bites">
+    <li><span class="item">Chicken Poppers</span><span class="cost">$6.00</span></li>
+    <li><span class="item">Mozz Sticks</span><span class="cost">$7.00</span></li>
+    <li><span class="item">Pigs in a blanket</span><span class="cost">$7.00</span></li>
+    <li><span class="item">Tater tots</span><span class="cost">$5.00</span></li>
+    <li><span class="item">Chicken tenders</span><span class="cost">$8.00</span></li>
+    <li><span class="item">Onion Rings</span><span class="cost">$5.00</span></li>
+    <li><span class="item">Fries</span><span class="cost">$5.00</span></li>
+    <li><span class="item">Sweet potato fries</span><span class="cost">$6.00</span></li>
+  </ul>
+</section>
+
+<section id="seasonal-menu"></section>
+
+<section id="sandwiches-and-salads"></section>
+
+<section id="beer-wine"></section>
+
 {% endblock main %}

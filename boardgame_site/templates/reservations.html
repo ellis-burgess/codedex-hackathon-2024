@@ -1,10 +1,35 @@
 {% extends "layout.html" %}
 
 {% block main %}
-<h1>Book Now!</h1>
-<p>We have just started using a new reservation software, Tock! Reservations are $15 a person for 3 hours of game time.</p>
-<p>All reservations can be made on our new site:</p>
-<a href="https://www.exploretock.com/sipnplay/">https://www.exploretock.com/sipnplay/</a>
-
-<button>Book now!</button>
+<article class="booking-information">
+  <h1>Book Now!</h1>
+  <p>We have just started using a new reservation software, Tock! Reservations are $15 a person for 3 hours of game time.</p>
+  <p>All reservations can be made on our new site:</p>
+  <a href="https://www.exploretock.com/sipnplay/">https://www.exploretock.com/sipnplay/</a>
+  
+  <button>Book now!</button>
+</article>
+<article class="birthday-packages">
+  <h2>Birthday Packages</h2>
+  <section>
+    <h3>Rent the entire backroom</h3>
+    <p>$350 for 3 hours of game time all to your party!</p>
+  </section>
+  <section>
+    <h3>Birthday Backroom Packages</h3>
+    <ul>
+      <li>$550 Birthday basic package. Have the entire backroom to yourselves 
+        and get pizza and soda for the whole party! For ten people, each 
+        additional person is +$30
+      </li>
+      <li>$700 Birthday premium package. Have the entire backroom to yourselves 
+        with pizza, soda, unlimited bubble tea, unlimited appetizers and each 
+        participant gets a Sip & Play goodie bag! For ten people, each 
+        additional person is +$45
+      </li>
+    </ul>
+    <p>For any other large party inquiries, visit the link above to make a 
+      booking!</p>
+  </section>
+</article>
 {% endblock main %}
