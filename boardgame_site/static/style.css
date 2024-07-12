@@ -3,9 +3,9 @@
 :root {
     --dark-1: #103F70;
     --dark-2: #973900;
-    --light-1: #87d7f8;
+    --light-1: hsl(198, 95%, 85%);
     --light-2: #e87530;
-    --light-neutral: #fffffa;
+    --light-neutral: hsl(60, 100%, 98%);
 }
 
 *, *::before, *::after {
@@ -13,10 +13,11 @@
     padding: 0;
     box-sizing: border-box;
     /* border: 0.5px solid red; */
+    line-height: 1.5;
 }
 
 body {
-    background-color: var(--light-neutral);
+    background-color: #fff;
     color: var(--dark-1);
     font-family: 'Hammersmith One', sans-serif;
 }
@@ -32,6 +33,10 @@ header {
     width: 100%;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 nav {
     display: flex;
     flex-flow: row;
@@ -40,6 +45,7 @@ nav {
     padding: 0 1em 0 0;
     position: relative;
     color: var(--dark-1);
+    background: var(--light-neutral);
 }
 
 .logo {
@@ -124,6 +130,10 @@ a:hover {
     transform:rotate(-1deg);
 }
 
+.hero-inner > p {
+    color: var(--dark-1);
+}
+
 .summary {
     width: 80%;
     max-width: 70rem;
@@ -131,6 +141,7 @@ a:hover {
     padding: 1em;
     margin-top: 2em;
     box-shadow: 0px 0px 10px var(--dark-1);
+    background: var(--light-neutral);
 }
 
 .summary > * {
@@ -156,8 +167,72 @@ a:hover {
     background: linear-gradient(0.25turn, var(--light-1) 0%, #fff 80%, var(--light-1) 100%);
     color: var(--dark-1);
     padding: 0.5em;
+    cursor: pointer;
+}
+
+.cta:active {
+    box-shadow: none;
 }
 
 .cta > span {
     display: block;
+}
+
+article {
+    background-color: #fff;
+    width: 80%;
+    max-width: 70rem;
+    border-radius: 12px;
+    padding: 1em;
+    margin: 2em;
+    box-shadow: 0px 0px 10px var(--dark-1);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+ul {
+    margin-left: 1em;
+}
+
+h3, h4 {
+    margin-top: 1em;
+}
+
+.event {
+    margin: 1em;
+    min-width: 50%;
+    border-radius: 12px;
+    border: 1px solid var(--light-1);
+    padding: 2em 4em;
+    background: var(--light-neutral);
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, var(--light-1) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--light-1) 1px, transparent 1px);
+    box-shadow: 4px 4px 4px var(--dark-1);
+}
+
+.event-content {
+    padding: 1em;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px var(--dark-1);
+}
+
+.event-header > img {
+    width: 5em;
+    border: 1px solid var(--dark-1);
+    border-radius: 12px;
+}
+
+.event-header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.event-header > div > h2 {
+    color: var(--light-2);
 }

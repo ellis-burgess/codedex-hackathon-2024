@@ -1,19 +1,33 @@
 {% extends "layout.html" %}
 
 {% block main %}
-<h1>Events Calendar</h1>
-<p>Check out our upcoming events!</p>
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Events Calendar</h1>
+    <p>Check out our upcoming events!</p>    
+  </div>
+</div>
 
 {% for event in events %}
-  <h2>{{ event.title }}</h2>
-  <p>{{ event.start_time }}</p>
-  <img src="{{ url_for('static', filename='img/' + event.event_banner) }}" alt="">
-  {% if event.recurring %}
-    <p>This event repeats!</p>
-    {% if event.end_recurrence %}
-      <p>This event will finish on {{ event.end_recurrence }}</p>
-    {% endif %}
-  {% endif %}
-  <p>{{ event.description }}</p>
+<div class="event">
+  <div class="event-content">
+    <div class="event-header">
+      <div>
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.start_time }}</p>  
+      </div>
+      <img src="{{ url_for('static', filename='img/' + event.event_banner) }}" alt="">  
+    </div>
+    <div class="event-details">
+      {% if event.recurring %}
+      <p>This event repeats!</p>
+        {% if event.end_recurrence %}
+          <p>This event will finish on {{ event.end_recurrence }}</p>
+        {% endif %}
+      {% endif %}
+      <p>{{ event.description }}</p>
+    </div>
+  </div>
+</div>
 {% endfor %}
 {% endblock main %}
