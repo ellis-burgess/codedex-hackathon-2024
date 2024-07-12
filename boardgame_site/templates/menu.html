@@ -1,8 +1,9 @@
 {% extends "layout.html" %}
 
-{% block extra-imports %}
+{% block extra_imports %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-{% endblock extra-imports %}
+  <script src="{{ url_for('static', filename='3d_assets.js') }}" type="module"></script>
+{% endblock extra_imports %}
 
 {% block main %}
 <div class="hero">
