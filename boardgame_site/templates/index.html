@@ -1,8 +1,27 @@
 {% extends "layout.html" %}
 
 {% block main %}
-<h1>Welcome to Sip n Play!</h1>
-<article class="reservations">
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Welcome to Sip n Play!</h1>
+    <p>A board game cafe in Brooklyn, NY.</p>    
+  </div>
+</div>
+  <article class="summary">
+    <p>You can browse our menu <a href="{{ url_for('menu') }}">here</a>, or check out our <a href="{{ url_for('events') }}">upcoming events</a>.</p>
+    <p>Not sure what we're about? We've got:</p>
+    <ul class="bx-ul">
+      <li><i class='bx bx-dice-5'></i>Over 300 board games for you and your friends to play</li>
+      <li><i class='bx bx-coffee'></i>Hot and cold drinks, including delicious boba</li>
+      <li><i class='bx bx-baguette'></i>Food to keep you going through those long gaming sessions</li>
+      <li><i class='bx bx-calendar'></i>Regular events to bring like-minded gamers together</li>
+    </ul>
+  </article>
+  <button class="cta">
+    <span>Ready to jump in?</span>
+    <span>Book your first session now!</span>
+  </button>
+<!-- <article class="reservations">
   <h2>Reservations are open for any party size!</h2>
   <p>For large parties (9 or more people), please email us at 
     <a href="mailto:sipnplaynyc@gmail.com">sipnplaynyc@gmail.com</a> 
@@ -39,5 +58,5 @@
     coffee, beer sandwiches or salads and have a great time! If you want to 
     guarantee a table, you can make a reservation which is $15 a person for 3 
     hours of gameplay.</p>
-</article>
+</article> -->
 {% endblock main %}
