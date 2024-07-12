@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block extra-imports %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+{% endblock extra-imports %}
+
 {% block main %}
 <div class="hero">
   <div class="hero-inner">
@@ -16,6 +20,7 @@
 </nav>
 
 <section id="coffee" class="menu-section">
+  <div class="model-container" id="coffee-model"></div>
   <h2>Coffee</h2>
   <ul class="coffee">
     <li><span class="item">Latte</span><span class="cost">$4.75</span></li>
@@ -30,6 +35,7 @@
 </section>
 
 <section id="specialty-drinks" class="menu-section">
+  <div class="model-container" id="drinks-model"></div>
   <h2>Specialty Drinks</h2>
   <ul class="specialty-drinks">
     <li><span class="item">Matcha Latte</span><span class="cost">$5.25</span></li>
@@ -45,6 +51,7 @@
 </section>
 
 <section id="boba" class="menu-section">
+  <div class="model-container" id="boba-model"></div>
   <h2>Boba</h2>
   <ul class="boba">
     <li>
@@ -98,6 +105,7 @@
 </section>
 
 <section id="hot-bites" class="menu-section">
+  <div class="model-container" id="food-model"></div>
   <h2>Hot Bites</h2>
   <ul class="hot-bites">
     <li><span class="item">Chicken Poppers</span><span class="cost">$6.00</span></li>

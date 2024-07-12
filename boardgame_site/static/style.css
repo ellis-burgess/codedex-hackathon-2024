@@ -349,3 +349,10 @@ h3, h4 {
     width: 80%;
     max-width: 70em;
 }
+
+.model-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: 1em 0;
+}
