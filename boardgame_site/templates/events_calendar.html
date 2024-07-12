@@ -8,26 +8,40 @@
   </div>
 </div>
 
+<div class="week-ribbon">
+  <a href="{{ url_for('events', date=prev_week) }}" class="nav-button">Previous Week</a>
+  <span>{{ start_date.strftime('%B %d, %Y') }} - {{ (start_date + timedelta(days=6)).strftime('%B %d, %Y') }}</span>
+  <a href="{{ url_for('events', date=next_week) }}" class="nav-button">Next Week</a>
+</div>
+
 {% for event in events %}
 <div class="event">
   <div class="event-content">
     <div class="event-header">
       <div>
         <h2>{{ event.title }}</h2>
-        <p>{{ event.start_time }}</p>  
+        <p>{{ event.formatted_start_time }}</p>  
       </div>
       <img src="{{ url_for('static', filename='img/' + event.event_banner) }}" alt="">  
     </div>
     <div class="event-details">
       {% if event.recurring %}
-      <p>This event repeats!</p>
-        {% if event.end_recurrence %}
-          <p>This event will finish on {{ event.end_recurrence }}</p>
-        {% endif %}
+        <p>This event occurs {{ event.frequency|lower }}!</p>
       {% endif %}
       <p>{{ event.description }}</p>
     </div>
   </div>
 </div>
 {% endfor %}
+
+{% if events|length < 1%}
+<div class="event">
+  <div class="event-content">
+    <div class="header">
+      <h2>No events this week!</h2>
+    </div>
+  </div>
+</div>
+{% endif %}
+
 {% endblock main %}

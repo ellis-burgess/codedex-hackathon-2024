@@ -3,34 +3,35 @@
 :root {
     --dark-1: #103F70;
     --dark-2: #973900;
-    --light-1: hsl(198, 95%, 85%);
+    --light-1: #b4e7fd;
     --light-2: #e87530;
-    --light-neutral: hsl(60, 100%, 98%);
+    --light-neutral: #fffff5;
+    --accent: #ff6347;
 }
 
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 0.5px solid red; */
     line-height: 1.5;
 }
 
 body {
-    background-color: #fff;
+    background-color: var(--light-neutral);
     color: var(--dark-1);
     font-family: 'Hammersmith One', sans-serif;
 }
 
 main {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
 }
 
 header {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
+    position: relative;
 }
 
 h1 {
@@ -39,12 +40,9 @@ h1 {
 
 nav {
     display: flex;
-    flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em 0 0;
-    position: relative;
-    color: var(--dark-1);
+    padding: 1em 2em;
     background: var(--light-neutral);
 }
 
@@ -58,33 +56,27 @@ nav {
 
 nav > ul {
     display: flex;
-    flex-flow: row nowrap;
     list-style: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    gap: 1em;
 }
 
 @media only screen and (max-width: 600px) {
     nav > ul {
         display: none;
+        flex-direction: column;
     }
 
     #nav-toggle {
         display: block;
-        position: absolute;
-        right: 10px;
         cursor: pointer;
     }
 
     .active {
         display: flex;
-        flex-flow: column;
-        text-align: center;
     }
 
     .active > li {
-        margin: 0.5em 0em;
+        margin: 0.5em 0;
     }
 
     .menu-active > #nav-toggle {
@@ -93,7 +85,7 @@ nav > ul {
 }
 
 nav > ul > li {
-    margin: 0em 0.5em;
+    margin: 0 0.5em;
 }
 
 a {
@@ -108,9 +100,10 @@ a:hover {
 .hero {
     text-align: center;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
     background-size: 40px 40px;
     background-image:
       linear-gradient(to right, var(--light-1) 1px, transparent 1px),
@@ -127,7 +120,7 @@ a:hover {
     border: 4px solid var(--dark-1);
     box-shadow: 4px 4px 4px var(--dark-1);
     padding: 2em;
-    transform:rotate(-1deg);
+    transform: rotate(-1deg);
 }
 
 .hero-inner > p {
@@ -138,14 +131,14 @@ a:hover {
     width: 80%;
     max-width: 70rem;
     border-radius: 12px;
-    padding: 1em;
+    padding: 2em;
     margin-top: 2em;
-    box-shadow: 0px 0px 10px var(--dark-1);
-    background: var(--light-neutral);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
 }
 
 .summary > * {
-    margin: 1.5em 0em;
+    margin: 1.5em 0;
 }
 
 .summary > p:first-child {
@@ -168,6 +161,11 @@ a:hover {
     color: var(--dark-1);
     padding: 0.5em;
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.cta:hover {
+    box-shadow: 2px 5px 4px var(--dark-1);
 }
 
 .cta:active {
@@ -183,11 +181,11 @@ article {
     width: 80%;
     max-width: 70rem;
     border-radius: 12px;
-    padding: 1em;
+    padding: 2em;
     margin: 2em;
-    box-shadow: 0px 0px 10px var(--dark-1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -201,23 +199,20 @@ h3, h4 {
 
 .event {
     margin: 1em;
-    min-width: 50%;
+    min-width: 80%;
     border-radius: 12px;
     border: 1px solid var(--light-1);
     padding: 2em 4em;
-    background: var(--light-neutral);
-    background-size: 40px 40px;
-    background-image:
-      linear-gradient(to right, var(--light-1) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--light-1) 1px, transparent 1px);
-    box-shadow: 4px 4px 4px var(--dark-1);
+    background: var(--light-1);
+    background: linear-gradient(0.15turn, var(--light-1) 20%, var(--dark-1));
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .event-content {
     padding: 1em;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 2px 2px 4px var(--dark-1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .event-header > img {
@@ -228,11 +223,10 @@ h3, h4 {
 
 .event-header {
     display: flex;
-    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
 }
 
 .event-header > div > h2 {
-    color: var(--light-2);
+    color: var(--dark-1);
 }
