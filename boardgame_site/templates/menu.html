@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
 {% block main %}
-<h1>Menu</h1>
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Menu</h1>
+  </div>
+</div>
 <nav class="menu-nav">
   <ul>
     <li><a href="#coffee">Coffee</a></li>
@@ -44,7 +48,7 @@
   <h2>Boba</h2>
   <ul class="boba">
     <li>
-      <span class="item">The OG</span><span class="description">Classic milk tea</span>
+      <div><span class="item">The OG</span><span class="description">Classic milk tea</span></div>
       <ul>
         <li class="cost">Medium: $4.25</li>
         <li class="cost">Large: $5.25</li>
@@ -52,7 +56,7 @@
       </ul>
     </li>
     <li>
-      <span class="item">Brown Sugar Boba</span><span class="description">Caffeine free</span>
+      <div><span class="item">Brown Sugar Boba</span><span class="description">Caffeine free</span></div>
       <ul>
         <li class="cost">Medium: $4.75</li>
         <li class="cost">Large: $5.75</li>
@@ -60,7 +64,7 @@
       </ul>
     </li>
     <li>
-      <span class="item">Taro Boba Coconut Boba</span><span class="description">Caffeine free, dairy free</span>
+      <div><span class="item">Taro Boba Coconut Boba</span><span class="description">Caffeine free, dairy free</span></div>
       <ul>
         <li class="cost">Medium: $4.25</li>
         <li class="cost">Large: $5.25</li>
@@ -68,28 +72,28 @@
       </ul>
     </li>
     <li>
-      <span class="item">Fruit Green/Black Tea</span><span class="description">Comes in a variety of flavors: mango/strawberry/passionfruit/peach/green apple/lychee/kiwi. Feel free to mix and match!</span>
+      <div><span class="item">Fruit Green/Black Tea</span><span class="description">Comes in a variety of flavors: mango/strawberry/passionfruit/peach/green apple/lychee/kiwi. Feel free to mix and match!</span></div>
       <ul>
         <li class="cost">Medium: $4.25</li>
         <li class="cost">Large: $5.25</li>
       </ul>
     </li>
     <li>
-      <span class="item">Fruit Black Tea</span><span class="description">Peach or strawberry flavor available. Feel free to mix and match!</span>
+      <div><span class="item">Fruit Black Tea</span><span class="description">Peach or strawberry flavor available. Feel free to mix and match!</span></div>
       <ul>
         <li class="cost">Medium: $4.75</li>
         <li class="cost">Large:$5.25</li>
       </ul>
     </li>
     <li>
-      <span class="item">Flavored Milk Tea</span><span class="description">Dairy free. Jasmine and watermelon flavors available.</span>
+      <div><span class="item">Flavored Milk Tea</span><span class="description">Dairy free. Jasmine and watermelon flavors available.</span></div>
       <ul>
         <li class="cost">Medium: $4.25</li>
         <li class="cost">Large: $5.25</li>
         <li class="cost">Hot: $5.25</li>
       </ul>
     </li>
-    <li><span class="item">Toppings</span><span class="cost">+$0.50</span><span class="description">Tapioca pearls, lychee jelly, mixed jelly, grass jelly, pop strawberry, pop passionfruit, mango stars</span></li>
+    <li><div><span class="item">Toppings</span><span class="description">Tapioca pearls, lychee jelly, mixed jelly, grass jelly, pop strawberry, pop passionfruit, mango stars</span></div><span class="cost">+$0.50</span></li>
   </ul>
 </section>
 

@@ -281,34 +281,33 @@ h3, h4 {
     color: var(--dark-1);
 }
 
-section {
+.menu-section {
     padding: 2em 1em;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-section h2 {
+.menu-section h2 {
     font-size: 2rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    color: var(--light-2);
+    border-bottom: 2px solid var(--dark-2);
     padding-bottom: 0.5em;
     margin-bottom: 1em;
 }
 
-section ul {
+.menu-section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-section ul li {
+.menu-section ul li {
     display: flex;
     justify-content: space-between;
     padding: 0.5em 0;
     border-bottom: 1px solid var(--border-color);
 }
 
-section ul li:last-child {
+.menu-section ul li:last-child {
     border-bottom: none;
 }
 
